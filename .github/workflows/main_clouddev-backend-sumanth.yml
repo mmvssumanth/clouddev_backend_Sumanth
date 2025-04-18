@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - clouddev-backend-sumanth
+name: Build and deploy Node.js app to Azure Web App - clouddev-backend-Sumanth
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: '22.x'
+          node-version: '18.x'
 
       - name: npm install, build, and test
         run: |
@@ -60,15 +60,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_43BE0B126747469DBF2A034B655F55C0 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_56ABE6D6D18641FFA9349E220D071E11 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_5749B96E68CD47268B09A02C9555B1A2 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_05358B2FBCCE41768B176FE640998483 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_81B28066EF25437393AA7023421A2509 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_2EA21901573949A4ADE120D06DE58851 }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'clouddev-backend-sumanth'
+          app-name: 'clouddev-backend-Sumanth'
           slot-name: 'Production'
           package: .
           
